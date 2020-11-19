@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    <ul>
+        <li>北京</li>
+        <li>重庆</li>
+        <li>上海</li>
+        <li>深圳</li>
+        <li>郑州</li>
+        <li>广州</li>
+    </ul>
+    <script>
+        var lis=document.getElementsByTagName("li")
+        for(var i=0;i<=lis.length;i++){
+            lis[i].onclick=function scanf(n){
+                return function(){
+                alert(lis[n].innerText)
+                }
+            }(i)
+            var a
+            a=i%2
+                if(a==1){
+                    lis[i].style.color="green"
+                }
+                else{
+                    lis[i].style.color="red"
+                }
+            }
+    </script>
+</body>
+</html>

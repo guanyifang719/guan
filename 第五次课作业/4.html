@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .content{
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        .message1{
+            height: 300px;
+            width: 600px;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+        #myInput{
+            
+            width: 560px;
+        }
+    </style>
+</head>
+<body>
+	<div class="content">
+        <div class="title">留言板</div>
+        <div class="message1" id="message"></div>
+        <div>
+            <input id="myInput" type="text" placeholder="请输入留言类容">
+            <button id="post">提交</button>
+        </div>
+    </div>
+    <script>
+            
+            var oMessageBox = document.getElementById("message");
+            var oInput = document.getElementById("myInput");
+            var oPostBtn = document.getElementById("post");
+            
+            oPostBtn.onclick = function(){
+                if(oInput.value){
+                    var oMessageContent = document.createElement("div");
+                    oMessageContent.innerHTML = oInput.value;
+                    oInput.value = "";
+                    oMessageBox.appendChild(oMessageContent);
+                }
+                
+            }
+            
+        
+    
+    </script>
+</body>
+</html>

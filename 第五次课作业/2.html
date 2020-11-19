@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="show()">改变颜色</button>
+    <button onclick="csize()">改变字体大小</button>
+    <p id="zt">变大</p>
+    <script>
+        var arr1=["green","red","yellow"]
+        var a=0
+        function show(){
+            a++
+            if(a<=2){
+                document.bgColor=arr1[a]
+            }
+            else if(a>2){
+                a=0
+                document.bgColor=arr1[a]
+            }
+        }
+        
+        var b=10
+        function csize(){
+            b=b+5
+            if(b<=25){
+                zt.style.fontSize=b+'px'
+            }
+            else if(b>25){
+                b=10
+                zt.style.fontSize=b+'px'
+            }
+        }
+    </script>
+</body>
+</html>
