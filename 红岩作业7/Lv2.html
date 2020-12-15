@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var user={
+            name:'fucking-man'
+        }
+        function mycall(age){
+            console.log('名字是'+this.name+',今年'+age+'岁了')
+        }
+        Function.prototype.call=function(target){
+            var args=[]
+            target.fn=this
+            console.log(this)
+            for(var i=1;i<arguments.length;i++){
+                args.push(arguments[i])
+            }
+            target.fn(args.join(','))
+            return target.fn
+        }
+        mycall.call(user,250)
+    </script>
+</body>
+</html>
